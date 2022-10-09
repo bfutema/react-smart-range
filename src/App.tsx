@@ -6,6 +6,6 @@ const App: React.FC = () => {
       <h1>React Smart Range App</h1>
     </div>
   );
-}
+};
 
 export { App };
