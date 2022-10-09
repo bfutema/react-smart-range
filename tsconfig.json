@@ -20,6 +20,12 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "src/App.tsx",
+    "src/index.tsx"
+  ],
   "include": [
     "src"
   ]
