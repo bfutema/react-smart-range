@@ -24,6 +24,8 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@devxperience/eslint-config": "^1.1.9",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -38,7 +40,16 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "react-scripts": "5.0.1",
+    "semantic-release": "^19.0.5",
     "typescript": "^4.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bfutema/react-smart-range.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
   },
   "config": {
     "commitizen": {
