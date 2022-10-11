@@ -1,7 +1,7 @@
 name: Release npm package
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
@@ -16,6 +16,7 @@ jobs:
           node-version: "16.x"
       - run: yarn
       - run: yarn build
+      # - run: yarn test
       - run: HUSKY=0 yarn semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
