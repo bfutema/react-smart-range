@@ -12,8 +12,8 @@ const exec = promisify(childExec);
 (async function build() {
   const commands = [
     'rm -rf ./lib',
-    'tsc --noEmit false --declaration --outDir ./lib/src/ --emitDeclarationOnly',
-    'babel ./src --extensions ".js,.ts,.jsx,.tsx" --out-dir ./lib/src/ --copy-files --no-copy-ignored',
+    'tsc --noEmit false --declaration --outDir lib/components --emitDeclarationOnly',
+    'babel src --extensions ".js,.ts,.jsx,.tsx" --out-dir lib --copy-files --no-copy-ignored',
   ];
 
   await exec(commands.join(' && '));
@@ -23,7 +23,10 @@ const exec = promisify(childExec);
     JSON.stringify({
       name: packageJson.name,
       version: packageJson.version,
+      main: packageJson.main,
       dependencies: packageJson.dependencies,
+      repository: packageJson.repository,
+      keywords: packageJson.keywords,
     }, null, 2),
   );
 })();
