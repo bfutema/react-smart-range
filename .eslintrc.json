@@ -1,1 +1,6 @@
-{ "extends": "@devxperience/eslint-config/react" }
+{
+  "extends": "@devxperience/eslint-config/react",
+  "rules": {
+    "import/no-extraneous-dependencies": "off"
+  }
+}
