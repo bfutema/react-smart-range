@@ -8,7 +8,8 @@
     "build": "node ./scripts/build.js",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "react": "^18.2.0",
