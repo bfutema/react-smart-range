@@ -1,11 +1,9 @@
 import React from 'react';
 
+import { SmartRange } from './components';
+
 const App: React.FC = () => {
-  return (
-    <div>
-      <h1>React Smart Range App</h1>
-    </div>
-  );
+  return <SmartRange />;
 };
 
 export { App };

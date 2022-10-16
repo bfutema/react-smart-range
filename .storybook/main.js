@@ -7,10 +7,18 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/preset-create-react-app"
+    "@storybook/preset-create-react-app",
+    "@storybook/addon-a11y"
   ],
   "framework": "@storybook/react",
   "core": {
     "builder": "@storybook/builder-webpack5"
+  },
+  webpackFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/react-smart-range';
+    }
+
+    return config;
   }
 }
