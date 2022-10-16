@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/bfutema/react-smart-range/compare/v1.0.0...v1.0.1) (2022-10-16)
+
+
+### Bug Fixes
+
+* **storybook:** :hammer: Fix storybook ci ([#6](https://github.com/bfutema/react-smart-range/issues/6)) ([52ea4ce](https://github.com/bfutema/react-smart-range/commit/52ea4cea4f5ca2df3ec2b75ba32e50f272f26498))
+
 # 1.0.0 (2022-10-11)
 
 
