@@ -6,18 +6,25 @@ on:
       - main
 
 jobs:
-  release:
+  build-and-publish-package:
     name: Publish NPM package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
-      - run: yarn
-      - run: yarn build
+          node-version: 16
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build Package
+        run: yarn build
+
       # - run: yarn test
-      - run: HUSKY=0 yarn semantic-release
+
+      - name: Versioning and Publish Package
+        run: HUSKY=0 yarn semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
