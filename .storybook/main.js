@@ -13,5 +13,12 @@ module.exports = {
   "framework": "@storybook/react",
   "core": {
     "builder": "@storybook/builder-webpack5"
+  },
+  webpackFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/react-smart-range';
+    }
+
+    return config;
   }
 }
