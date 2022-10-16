@@ -51,4 +51,4 @@ jobs:
       - name: Deploy Storybook
         run: yarn deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
-          GITHUB_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
