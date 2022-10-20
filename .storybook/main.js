@@ -18,4 +18,8 @@ module.exports = {
     config.output.publicPath = '/react-smart-range/';
     return config;
   },
+  managerWebpack: async (config) => {
+    config.output.publicPath = '/react-smart-range/';
+    return config;
+  },
 }
